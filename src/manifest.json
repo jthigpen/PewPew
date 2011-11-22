@@ -9,6 +9,6 @@
         "128": "icons/icon128.png"
     },
     "permissions": [
-        "https://s3.amazonaws.com/PewPew/v1.0/*.wav"
+        "https://s3.amazonaws.com/PewPew/v1.0/*.wav","tabs"
     ]
 }

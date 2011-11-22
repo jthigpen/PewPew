@@ -21,4 +21,12 @@ chrome.tabs.onRemoved.addListener(function(tabId, removeObject) {
         sounds[parseInt(random / 33)].play();
 });
 
+function tabCounter () {
+  chrome.tabs.getAllInWindow(null, function (tabs) {
+    if (tabs.length > 10) sounds[3].play();
+  });
+}
+
+chrome.tabs.onCreated.addListener(function (tab) { tabCounter(); });
+
 loadSounds();
